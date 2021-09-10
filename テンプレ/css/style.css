@@ -1,5 +1,5 @@
 
-/* ----------------------------------------------------------表示/非表示---------------------------------------------------------- */
+/* ----------------------------------------------------------非表示→表示---------------------------------------------------------- */
 .hidden_box {
     margin: 2em 0;/*前後の余白*/
     padding: 0;
@@ -42,6 +42,52 @@
     opacity: 1;
 }
 
+/* ----------------------------------------------表示→非表示----------------------------------------------------------- */
+/* https://techacademy.jp/magazine/25173 */
+.show_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.show_box label {
+    /* padding: 15pt; */
+    font-weight: bold;
+    font-size: 25px;
+    width:max-content;
+    /* border:1pt solid; */
+    display: block;
+    /* border: solid 2px black; */
+    cursor :pointer;
+    /* padding-top: 0px; */
+}
+
+/*ボタンホバー時*/
+.show_box label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.show_box input {
+    display: none;
+}
+
+/*中身を表示にしておく*/
+.show_box .show_hidden {
+    /* height: 0; */
+    padding: 0;
+    overflow: hidden;
+    /* opacity: 0; */
+    transition: 0.8s;
+    /* display: inline;  */
+    border-left:thick solid #8f8c8c ;
+    padding-left: 20px;
+}
+
+/*クリックで中身非表示*/
+.show_box input:checked ~ .show_hidden {
+    display: none;
+}
 /* ---------------------------------------リンクの色について ------------------------------------------------*/
 /* https://techacademy.jp/magazine/21233 */
 /* 訪問済みリンクの色を変えない */
@@ -55,6 +101,7 @@ a.no-color-change:hover {
 
 /* ----------------------------------------------キャラアイコン-------------------------------------------------------------- */
 /* http://www.stylish-style.com/csstec/base/position.html */
+/* 目次ページでのアイコン */
 .chara-icon {
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -64,4 +111,16 @@ a.no-color-change:hover {
     position: relative;
     top: 6px;
 }
+
+/* 各キャラの対策ページでのアイコン */
+.chara-page-icon {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 33%;
+    max-width: 100px;
+    margin-right: 0.5%;
+    position: relative;
+    top: 14px;
+}
+
 

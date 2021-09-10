@@ -1,4 +1,4 @@
-# スマブラの公式HPからキャラリストを持ってくる
+# スマメイトからキャラリストを持ってくる
 import collections
 import requests,bs4,time,openpyxl
 

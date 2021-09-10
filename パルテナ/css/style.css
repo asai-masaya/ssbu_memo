@@ -54,11 +54,12 @@
     /* padding: 15pt; */
     font-weight: bold;
     font-size: 25px;
-    width: 100pt;
+    width:max-content;
     /* border:1pt solid; */
     display: block;
     /* border: solid 2px black; */
     cursor :pointer;
+    /* padding-top: 0px; */
 }
 
 /*ボタンホバー時*/
@@ -73,14 +74,15 @@
 
 /*中身を表示にしておく*/
 .show_box .show_hidden {
-    height: 0;
+    /* height: 0; */
     padding: 0;
     overflow: hidden;
     /* opacity: 0; */
     transition: 0.8s;
-    display: inline;
-    border-left:thick solid #636060 ;
-    padding-left: 50px;
+    /* display: inline;  */
+    border-left:3px solid #aca9a9 ;
+    padding-left: 20px;
+    margin-left: 15px;
 }
 
 /*クリックで中身非表示*/
@@ -96,7 +98,9 @@ a.no-color-change {
 /* カーソルが来たら色を変える */
 a.no-color-change:hover {
     color: red;
+    opacity: 0.75;
 }
+
 
 /* ----------------------------------------------キャラアイコン-------------------------------------------------------------- */
 /* http://www.stylish-style.com/csstec/base/position.html */
@@ -122,4 +126,71 @@ a.no-color-change:hover {
     top: 14px;
 }
 
+.chara-icon-tab {
+    padding: 0px;
+    width: 100px;
+}
+
+/* -------------------------------------------タブメニュー--------------------------------------------------------------- */
+/* https://bagelee.com/design/css/create_tabs_using_only_css/ */
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+    /* margin-top: 50px; */
+    padding-bottom: 40px;
+    background-color: #fff;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+    width: auto;
+    margin: 0;
+}
+  
+/*タブのスタイル*/
+.tab_item {
+    width: 200px;
+    height: 50px;
+    /* border-bottom: 3px solid #5ab4bd; */
+    background-color: #d9d9d9;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #565656;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.tab_item:hover {
+    opacity: 0.75;
+}
+  
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+    display: none;
+}
+  
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+    display: none;
+    padding-top:40px;
+    /* padding: 40px 40px 0; */
+    clear: both;
+    overflow: hidden;
+}
+  
+  
+/*選択されているタブのコンテンツのみを表示*/
+#first:checked ~ #first_content,
+#second:checked ~ #second_content,
+#third:checked ~ #third_content {
+    display: block;
+}
+  
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+    background-color: #5ab4bd;
+    color: #fff;
+}
 
