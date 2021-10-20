@@ -238,10 +238,12 @@ input[name="tab_item"] {
   
   
 /*選択されているタブのコンテンツのみを表示*/
-#first:checked ~ #first_content,
-#second:checked ~ #second_content,
-#third:checked ~ #third_content,
-#forth:checked ~ #forth_content {
+#first:checked ~ #chara_choice,
+#second:checked ~ #chara_generation,
+#third:checked ~ #tips,
+#forth:checked ~ #movie_contents,
+#fifth:checked ~ #palutena_basic_data
+{
     display: block;
 }
   
