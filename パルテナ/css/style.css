@@ -149,7 +149,7 @@ a.no-color-change:hover {
 
 /* ----------------------------------------------キャラアイコン-------------------------------------------------------------- */
 /* http://www.stylish-style.com/csstec/base/position.html */
-/* 目次ページでのアイコン */
+/* 目次ページの世代別キャラ分類でのアイコン */
 .chara-icon {
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -175,7 +175,7 @@ a.no-color-change:hover {
     padding: 0px;
     width: 100px;
 }
-
+/* キャラ選択画面でのアイコン */
 .chara-choice {
     width: 96px;
     height: 55px;
