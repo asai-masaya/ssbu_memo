@@ -17,7 +17,7 @@ h_unit = [55,55,55,55,55,55,55]
 h_errt = [0,0,0,-1,-1,-1,-1]
 h_errb = [0,-1,-1,-1,-2,-2,-2]
 w_unit = 96
-h_adj = 1
+h_adj = 3
 w_adj = 2
 # 分割した画像を内包表記でリスト化
 c = []
@@ -28,8 +28,8 @@ for x in range(nh):
 # ファイル番号（0.jpg、1.jpg、・・）を付けて、sepaフォルダに保存
 
 x = 6
-for y in range(8):
-    c = c + [image[h_adj +h_errt[x]+ h_unit[x]*x:h_adj+h_errb[x] + h_unit[x]*(x+1), int(w_unit*2.5) + w_adj + w_unit*y:w_adj + int(w_unit*2.5)+ w_unit*(y+1)]]
+for y in range(9):
+    c = c + [image[h_adj +h_errt[x]+ h_unit[x]*x:h_adj+h_errb[x] + h_unit[x]*(x+1), int(w_unit*2) + w_adj + w_unit*y:w_adj + int(w_unit*2)+ w_unit*(y+1)]]
 
 wb=openpyxl.load_workbook('CharaList.xlsx')
 s=wb.get_sheet_by_name('chara_choice')
