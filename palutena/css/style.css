@@ -238,11 +238,11 @@ input[name="tab_item"] {
   
   
 /*選択されているタブのコンテンツのみを表示*/
-#first:checked ~ #chara_choice,
-#second:checked ~ #chara_generation,
-#third:checked ~ #tips,
-#forth:checked ~ #movie_contents,
-#fifth:checked ~ #palutena_basic_data
+#first:checked ~ #first_content,
+#second:checked ~ #second_content,
+#third:checked ~ #third_content,
+#forth:checked ~ #forth_content,
+#fifth:checked ~ #fifth_content
 {
     display: block;
 }
@@ -290,6 +290,7 @@ input[name="tab_item"] {
 
 
 /* ------------------------------------テーブルについて--------------------------------------- */
+/* https://mamewaza.com/support/blog/howto-use-flex.html */
 table.chara-choice {
     border-collapse: collapse;
     border-spacing: 0px 0px;
@@ -299,6 +300,63 @@ table.chara-choice {
     margin-left: auto;
     margin-right: auto;
 }
+
+tr.frame-white {
+    background-color: white;
+    text-align: center;
+}
+
+tr.frame-gray {
+    background-color: rgb(228, 225, 225);
+    text-align: center;
+}
+
+th.action-name {
+    border-right: 1px #ccc solid ;
+}
+
+th.index {
+    border-bottom: 1px #ccc solid;
+}
+
+th.left {
+    border-left: 1px #ccc solid;
+}
+
+th.box{
+    border: 1px #ccc solid ;
+}
+
+td.action-name {
+    border-right: 1px #ccc solid ;
+}
+
+td.index {
+    border-bottom: 1px #ccc solid;
+}
+
+table.basic-data {
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    border: 1px #ccc solid;
+    text-align: center;
+}
+
+table.guard-cancel {
+    /* border-collapse: collapse; */
+    border-spacing: 0px 0px;
+    text-align: center;
+}
+
+div.yokonarabi {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+
 
 /* ----------------------------------------リストについて----------------------------------------------------- */
 /* https://saruwakakun.com/html-css/reference/list-space */

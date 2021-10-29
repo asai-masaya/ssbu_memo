@@ -1,7 +1,7 @@
 # Javascriptを作成するためのファイル
 import os,openpyxl
 
-f=open('ForRondom.txt','w')
+f=open('ForRandom.txt','w')
 wb=openpyxl.load_workbook('CharaList.xlsx')
 s=wb.get_sheet_by_name('html_base')
 
