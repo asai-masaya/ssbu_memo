@@ -7,26 +7,30 @@ from bs4 import BeautifulSoup
 import re
 
 wb=openpyxl.load_workbook('CharaList.xlsx')
-s=wb.get_sheet_by_name('Sheet1')
+s=wb.get_sheet_by_name('html_base')
 
-for i in range(2,s.max_row+1):
+for i in range(1,s.max_row+1):
   
   t=str(s.cell(i,1).value)
   n=s.cell(i,2).value
-  url = "../chara_page/"+t+".html"
+  url = "../chara_pages/"+t+".html"
   if not (os.path.isfile(url)):
     continue
 
   f=open(url,encoding="utf-8_sig")
 
   data=f.read()
-  # print(data)
+  # print(data[20:24])
   
-  data.replace('image/','images/')
-  # data.replace('01',t)
 
+  # 'image/'を'images/'に置き換えたい場合
+  data.replace('image/','images/')
   data=re.sub('image/','images/',data)
-  # data=re.sub('01',t,data)
+
+  data.replace('試合動画','参考動画')
+  data=re.sub('試合動画','参考動画',data)
+
+  
 
   f=open(url,'w',encoding="utf-8_sig")
   f.write(data)
